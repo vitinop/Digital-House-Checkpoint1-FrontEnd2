@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/404f1f8d83.js" crossorigin="anonymous"></script>
+    <title>Checkpoint 1 | Front End ll</title>
+</head>
+
+<header class="defaultHeader">
+    <label class="switch">
+
+        <input type="checkbox" id="toggle-theme-box" class="toggle-theme-box">
+        <span class="slider round"></span>
+    </label>
+</header>
+
+<body>
+    
+    <section class="bodyMain">
+
+        <div class="formulario">
+            <div class="title">Bem vindo !</div>
+            <div class="subtitle">Vamos adicionar o seu jogo! 🎮</div>
+
+            <div class="input-container ic1">
+              <input id="gameNameForm" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="gameNameForm" class="placeholder">Nome do jogo</label>
+            </div>
+
+            <div class="input-container gameDescriptionForm">
+              <textarea id="gameDescriptionForm" class="input" type="text" placeholder=" " ></textarea>
+              <div class="cut cut-long"></div>
+              <label for="gameDescriptionForm" class="placeholder">Descrição do jogo</label></input>
+            </div>
+            <div class="input-container ic1">
+              <input id="gameIMGForm" class="input" type="text" placeholder=" " />
+              <div class="cut cut-long"></div>
+              <label for="gameIMGForm" class="placeholder">Link da Capa do jogo</label>
+            </div>
+            
+
+            <button type="text" class="submit">Adicionar Título</button>
+          </div>        
+
+    </div>
+    <div class="gameCards"></div>
+
+    </section>
+    <script src="./js/script.js"></script>
+    <script src="./js/dark-mode.js"></script>
+
+</html>
+</body>
