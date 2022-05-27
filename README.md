@@ -16,40 +16,22 @@
     <li>A aplicação deve ser responsiva.</li>
     <li>A aplicação consiste em um formulário que, ao ser preenchido, cria cards com as informações preenchidas.</li>
     <li> Sobre o formulário: </li>
-    
-      <li>O formulário deve ter pelo menos 4 campos: Título, Descrição e URL da imagem e um botão de submit.</li>
-      <li>Após o preenchimento, ao clicar no botão de submit, as informações devem ser adicionadas à lista de cards na página</li> 
-      <li>Dica: Você pode acrescentar outros campos ao formulário para deixar a aplicação mais completa.</li>
-    
-  
+     <ul>
+     <li>O formulário deve ter pelo menos 4 campos: Título, Descrição e URL da imagem e um botão de submit.</li>
+     <li>Após o preenchimento, ao clicar no botão de submit, as informações devem ser adicionadas à lista de cards na página</li> 
+     <li>Dica: Você pode acrescentar outros campos ao formulário para deixar a aplicação mais completa.</li>
+     </ul>
     <li>Sobre os Cards:</li>
     <ul>
       <li>Os cards devem ter uma imagem e constar todas as informações previamente preenchidas no formulário. </li>
       <li>O comportamento se dará de forma que as informações preenchidas sejam exibidas na seção de cards.</li>
-     <ul>
+    </ul>
   
   </ol>
 
-<li>Pode gerir o estado de cada usuário para Ativo ou não ativo na instituição.</li>
-<li>Inteiração com a Classe Turmas: Criar/Editar/Visualizar. Turmas e matérias atrelados a eles e os horários de cada Turma. </li>
-<li>Inteiração com a Classe Alunos: Criar/Editar/Visualizar. Alunos e Gerencie Alunos entre turmas e informações relativas a sua inscrição.</li>
-<li>Inteiração com a Classe Professores: Criar/Editar/Visualizar. Professores e seus horários.</li>
- 
- </ul>
 
 
-<p>Professores - Oque o usuário pode fazer ?</p>
- <ul>
-<li>Inteiração com a Classe Aluno : Adicionar/ Editar Nota de um aluno - Visualizar dados relativos a inscrição do aluno
-<li>Inteiração com a Classe Professor: Visualizar seus dados/matérias </li>
-  </ul>
 
-
-<p>Alunos - Oque o usuário pode fazer ?</p>
-<li>Inteiração com a Aluno: Visualizar. Consulta sua nota, horários de aula , turmas que já participou ou participou, notas relativas a matéria, e dados relativos a sua inscrição ( nome,  ano letivo, turma que já participou e notas relativa à matéria)</li>
-
-<h3 align="center">Este é o diagrama UML ilustrando todas interações de classes para o cenário apresentado acima </h3>
-<p align="center"><img height="600em" src="./imgDescricao/DiagramaCheckpoint1-POO.jpg" /></p>
 
 #### Equipe:
 
