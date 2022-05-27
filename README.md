@@ -8,7 +8,8 @@
 
 ---
 
-<h3 align="center">Instruções e requisitos do entregável</h3>
+<div align="start">
+<h2>🔧 Requisitos do projeto:</h2>
 
   <ol>
     <li>O tema da aplicação é de sua preferência. Pode ser sobre carros, animes, cidades, etc.</li>
@@ -26,6 +27,7 @@
       <li>O comportamento se dará de forma que as informações preenchidas sejam exibidas na seção de cards.</li>
     </ul>
   </ol>
+  </div>
 
 
 
@@ -34,10 +36,16 @@
 
 <h3 align="center">Checkpoint1 - Imagens de amostra do projeto finalizado</h2>
 
+Acesse o prototipo do projeto através do link :
+    
+https://digital-house-checkpoint2-frontend.vercel.app/
 
 
-#### Equipe:
 
- - <p><a href="https://github.com/fehbr800" title="Matheus Emanuel Github">Matheus Emanuel</a></p>
- - <p><a href="https://github.com/vitinop" title="Victor Luz Github">Victor Luz</a></p>
- - <p><a href="https://github.com/ViniciusFelce" title="Vinicius Felce Github">Vinicius Felce</a></p>
+
+<div align="start"> 
+<h2> :handshake: Integrantes</h2>
+  <li><a target="_blank" href="https://github.com/fehbr800" title="Matheus Emanuel Github">Matheus Emanuel</a></li>
+  <li><a target="_blank" href="https://github.com/vitinop" title="Victor Luz Github">Victor Luz</a></li>
+  <li><a target="_blank" href="https://github.com/ViniciusFelce" title="Vinicius Felce Github">Vinicius Felce</a></li>
+ </div>
