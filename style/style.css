@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Kumbh Sans', sans-serif;
-    height: 100vh;
-    background: rgb(2,225,251);
-    background: linear-gradient(159deg, rgba(2,225,251,1) 0%, rgba(45,119,253,1) 100%);
-    transition: 1s;
-}
- /* Posicionamento do botão de troca de tema */
-.defaultHeader{
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100vh;
+
+  background: rgb(5, 16, 37);
+  transition: 1s;
+} 
+
+/* Posicionamento do botão de troca de tema */
+.defaultHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
 }
 
-.bodyMain{
+.bodyMain {
   display: flex;
   justify-content: center;
 }
@@ -29,7 +31,7 @@ body {
 
 /* Estilização do formulario */
 
-.formulario  {
+.formulario {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +61,7 @@ body {
   margin-top: 10px;
 }
 
-.input { 
+.input {
   background-color: #303245;
   border-radius: 12px;
   border: 0;
@@ -70,7 +72,7 @@ body {
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
- 
+
 }
 
 .input-container {
@@ -79,11 +81,12 @@ body {
   margin-top: 25px;
 }
 
-.gameDescriptionForm{
+.gameDescriptionForm {
   height: 300px;
 }
-.gameDescriptionForm textarea{
-  resize: none;  
+
+.gameDescriptionForm textarea {
+  resize: none;
 }
 
 .ic1 {
@@ -108,8 +111,8 @@ body {
   width: 130px;
 }
 
-.input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut {
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
   transform: translateY(8px);
 }
 
@@ -125,16 +128,16 @@ body {
   top: 20px;
 }
 
-.input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:not(:placeholder-shown)~.placeholder {
   color: #808097;
 }
 
-.input:focus ~ .placeholder {
+.input:focus~.placeholder {
   color: #dc2f55;
 }
 
@@ -156,3 +159,126 @@ body {
 .submit:active {
   background-color: #06b;
 }
+
+
+/* Seção Cards */
+
+
+.section_cards {
+  height: 100vh;
+  width: 90vw;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+
+.container-card {
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgba(255, 255, 255, 0.281);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+
+}
+
+
+
+ .container-card img {
+  width: 100%;
+  height: 100%;
+  gap: 0.5;
+  border-radius: 18px;
+}
+
+.titulo-card{
+  padding: 1em;
+  text-align: left;
+  z-index: 10;
+
+}
+
+.titulo-card h2{
+  color: white;
+  font-weight: 600;
+  display: none;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+
+
+
+.descricao{
+  clear: both;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 80vw;
+  max-height: 0;
+  -webkit-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out;
+  color: #fff;
+  background: #02182c;
+  -webkit-order: 1;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  
+ 
+  
+}
+
+.descricao p{
+  font-family: 'Kumbh Sans', sans-serif;
+  margin: 4.5%;
+  -webkit-animation: fadeout 2s;
+  animation: fadeout 2s;
+} 
+
+
+.container-card:hover h2{
+  display: block;
+  text-align: center;
+  animation: 2s anim-lineUp ease-in-out;
+}
+
+
+
+.container-card:hover > img{
+  opacity: 3;
+}
+
+.container-card:hover{
+  background-color: #eee;
+
+}
+
+.container-card:hover + .descricao{
+  max-height: 200px;
+  -webkit-transition: max-height .5s ease-in;
+  transition: max-height .5s ease-in;
+}
+
+.container-card:hover > .descricao > p {
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+  
+} 
+
