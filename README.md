@@ -6,10 +6,9 @@
 <p align="justify">&emsp;Esta atividade tem como objetivo servir como primeiro instrumento avaliativo da disciplina. Se atente às instruções e boa avaliação. O entregável será uma página em HTML5, CSS3 e Javascript seguindo os conteúdos ministrados até aqui.
  O checkpoint pode ser realizado em grupos de até 3 membros.</p>
 
-
 ---
 
-<h3 align="center"><u>Instruções e requisitos do entregável</h3>
+<h3 align="center">Instruções e requisitos do entregável</h3>
 
   <ol>
     <li>O tema da aplicação é de sua preferência. Pode ser sobre carros, animes, cidades, etc.</li>
@@ -26,10 +25,14 @@
       <li>Os cards devem ter uma imagem e constar todas as informações previamente preenchidas no formulário. </li>
       <li>O comportamento se dará de forma que as informações preenchidas sejam exibidas na seção de cards.</li>
     </ul>
-  
   </ol>
 
 
+
+---  
+ 
+
+<h3 align="center">Checkpoint1 - Imagens de amostra do projeto finalizado</h2>
 
 
 
