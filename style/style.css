@@ -10,23 +10,14 @@
 body {
   font-family: 'Kumbh Sans', sans-serif;
   height: 100vh;
-
   background: rgb(5, 16, 37);
   transition: 1s;
 } 
-
-/* Posicionamento do botão de troca de tema */
-.defaultHeader {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-}
-
 .bodyMain {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 
 /* Estilização do formulario */
@@ -82,7 +73,7 @@ body {
 }
 
 .gameDescriptionForm {
-  height: 300px;
+  height: 200px;
 }
 
 .gameDescriptionForm textarea {
@@ -90,7 +81,7 @@ body {
 }
 
 .ic1 {
-  height: 65px;
+  height: 75px;
 }
 
 
@@ -163,137 +154,109 @@ body {
 
 /* Seção Cards */
 
-
-.section_cards {
-  height: 100vh;
-  width: 90vw;
-  margin: 30px;
+.gameCardsSection
+{
+  width:100vw;
+  width: 90vw;   
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 20px;
-  box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  margin-bottom: 24px;
 }
-
-
-.container-card {
-  margin: 20px;
-  width: 200px;
-  height: 300px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid rgba(255, 255, 255, 0.281);
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-
-
-
- .container-card img {
-  width: 100%;
-  height: 100%;
-  gap: 0.5;
-  border-radius: 18px;
-}
-
-.titulo-card{
-  padding: 1em;
-  text-align: left;
-  z-index: 10;
-
-}
-
-.titulo-card h2{
-  color: white;
-  font-weight: 600;
-  display: none;
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.2em;
-}
-
-
-
-
-.descricao{
-  position: absolute;
-  clear: both;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-  max-height: 0;
-  -webkit-transition: max-height .5s ease-out;
-  transition: max-height .5s ease-out;
-  color: #fff;
-  background: #02182c;
-  -webkit-order: 1;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
+.individualGamecard
+{
+  width:333.33px;
+  height:500px;
+  margin:10px;
+  border-radius: 8px;
+  background-color:#3d3d3f;
+  background-size:cover;
+  position:relative;
+  cursor:pointer;
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+  overflow:hidden;
+  color:white;
+  font-family:'Roboto';
   
+}
+.individualGamecard img
+{
+  height:100%;
+  width:100%;
+  position:absolute;
+  border-radius: 8px;
+  top:0;
+  left:0;
+  z-index:0;
+  transition: all 0.4s ease-out;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.individualGamecard .text
+{
+/*   z-index:99; */
+  position:absolute;
+  padding:30px;
+  height:calc(100% - 60px);
+}
+.individualGamecard h1
+{
  
-  
+  font-weight:300;
+  margin:0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.individualGamecard h3
+{
+  font-weight:100;
+  margin:20px 0 0 0;
+  font-style:italic;
+   transform: translateX(200px);
+}
+.individualGamecard p
+{
+  font-weight:300;
+  margin:20px 0 0 0;
+  line-height: 25px;
+/*   opacity:0; */
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.animate-text
+{
+  opacity:0;
+  transition: all 0.6s ease-in-out;
+}
+.individualGamecard:hover
+{
+/*   background-color:#99aeff; */
+box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+  transform:scale(1.05);
+}
+.individualGamecard:hover img
+{
+  opacity: 0.2;
+}
+.individualGamecard:hover .animate-text
+{
+  transform:translateX(0);
+  opacity:1;
 }
 
-.descricao p{
-  font-family: 'Kumbh Sans', sans-serif;
-  margin: 4.5%;
-  -webkit-animation: fadeout 2s;
-  animation: fadeout 2s;
-} 
-
-
-.container-card:hover h2{
-  display: block;
-  text-align: center;
-  animation: 2s anim-lineUp ease-in-out;
+.individualGamecard:hover span
+{
+  opacity:1;
+  transform:translateY(0px);
 }
 
 
-
-.container-card:hover > img{
-  opacity: 3;
-  transform: scale(1.1);
-  transform: translateY(-20px);
-  border: 3px solid white;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transform: rotateY(-200deg);
-  -moz-transform: rotateY(-200deg);
-  -ms-transform: rotateY(-200deg);
-  -o-transform: rotateY(-200deg);
+@media (max-width: 1000px) {
+  .wrap {
+   flex-direction: column;
+    width:400px;
+  }
 }
-
-
-
-.container-card:hover + .descricao{
-  max-height: 200px;
-  -webkit-transition: max-height .5s ease-in;
-  transition: max-height .5s ease-in;
-}
-
-.container-card:hover > .descricao > p {
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
-  
-} 
-
