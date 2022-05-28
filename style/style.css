@@ -196,7 +196,10 @@ body {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   cursor: pointer;
-
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 
@@ -228,10 +231,13 @@ body {
 
 
 .descricao{
+  position: absolute;
   clear: both;
   overflow: hidden;
   box-sizing: border-box;
-  width: 80vw;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
   max-height: 0;
   -webkit-transition: max-height .5s ease-out;
   transition: max-height .5s ease-out;
@@ -263,12 +269,21 @@ body {
 
 .container-card:hover > img{
   opacity: 3;
+  transform: scale(1.1);
+  transform: translateY(-20px);
+  border: 3px solid white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transform: rotateY(-200deg);
+  -moz-transform: rotateY(-200deg);
+  -ms-transform: rotateY(-200deg);
+  -o-transform: rotateY(-200deg);
 }
 
-.container-card:hover{
-  background-color: #eee;
 
-}
 
 .container-card:hover + .descricao{
   max-height: 200px;
