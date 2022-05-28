@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="./style/style.css">
-  <script src="https://kit.fontawesome.com/404f1f8d83.js" crossorigin="anonymous"></script>
   <title>Checkpoint 1 | Front End ll</title>
+
 </head>
 
 
@@ -26,7 +25,7 @@
         <label for="gameNameForm" class="placeholder">Nome do jogo</label>
       </div>
       <div class="input-container ic1">
-        <input id="gameReleaseDateForm" class="input" type="text" placeholder=" " />
+        <input id="gameReleaseDateForm" class="input" type="number" min="1950" max="2099" step="1" placeholder=" " />
         <div class="cut cut-long"></div>
         <label for="gameReleaseDateForm" class="placeholder">Ano de lançamento</label>
       </div>
@@ -70,6 +69,7 @@
         </div>
       </div>
 
+      
       <div class="individualGamecard">
         <img
           src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80' />
@@ -79,19 +79,12 @@
           <p class="animate-text">Descrição do game. </p>
         </div>
       </div> -->
-      
+
     </div>
-    
 
 
-
-
-
-
-
-
-
-    <script src="./js/script.js"></script>
+    <script src="./js/renderItens.js"></script>
+    <script src="./js/validacaoForms.js"></script>
 
 
 </html>
