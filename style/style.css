@@ -87,6 +87,7 @@ body {
 
 /* Animação de transição de placeholder */
 .cut {
+ 
   background-color: #15172b;
   border-radius: 10px;
   height: 20px;
@@ -251,6 +252,49 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 {
   opacity:1;
   transform:translateY(0px);
+}
+
+/* Estilização da validação do formulário */
+.input-container .fa-circle-check {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: green;
+  visibility: hidden;
+  
+}
+
+.input-container .fa-circle-xmark {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: red;
+  visibility: hidden;
+
+}
+
+
+.input-container.sucess .fa-circle-check{
+  visibility: visible;
+}
+
+.input-container.sucess input {
+  border: green 2px solid;
+}
+
+.input-container.fail .fa-circle-xmark{
+  visibility: visible;
+}
+
+.input-container.fail input {
+  border: red 2px solid;
+
+}
+
+.error {
+  text-align: center;
+  font-size: 12px;
+  color: red;
 }
 
 
