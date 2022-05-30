@@ -23,6 +23,13 @@ let cardInfoBank = [
       'setGameReleaseDateForm': 'a',
       'setGameDescriptionForm':'a',
     },
+    {
+      'setGameIMGForm' :'https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ',
+      'setGameNameForm' :'Resident Evil 7 ',
+      'setGameReleaseDateForm': '2018',
+      'setGameDescriptionForm':" texto amostra ",
+    },
+    
 
 ];
 
@@ -61,9 +68,10 @@ const atualizarItens = () => {
   
 }
 
-// Adiciona um novo card com o evento submit
+// Adiciona um novo card no Json com o evento submit
 const inserirNovoItem = () =>{
   document.getElementById('submit').onclick(cardInfoBank.push({}));
+  atualizarItens ();
 }
 
 
