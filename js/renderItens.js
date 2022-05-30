@@ -29,7 +29,6 @@ let cardInfoBank = [
 
 
 
-
 // Renderizando os cards via Js - Através da exploração bacon JSON e renderização dos itens
 const criarItemCard = (
   setGameIMGForm,
