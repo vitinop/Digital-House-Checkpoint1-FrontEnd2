@@ -12,33 +12,19 @@ let botaoSubimit = document.getElementById("submit");
 let cardInfoBank = [
   {
     setGameIMGForm:
-      "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg?t=1643243335 ",
-    setGameNameForm: "Devil May Dry 5",
+      "https://img.elo7.com.br/product/zoom/2534209/big-poster-gamer-devil-may-cry-5-lo001-tamanho-90x60-cm-poster-gamer.jpg ",
+    setGameNameForm: "Devil May Cry 5",
     setGameReleaseDateForm: "2019",
     setGameDescriptionForm: "O melhor caçador de demônios está de volta com estilo, no jogo que os fãs de ação estavam esperando. Agora inclui o conteúdo baixável Personagem Jogável: Vergil (também disponível separadamente).",
-  },
-  {
-    setGameIMGForm:
-      "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg?t=1643243335 ",
-    setGameNameForm: "Devil May Dry 5",
-    setGameReleaseDateForm: "2019",
-    setGameDescriptionForm: "O melhor caçador de demônios está de volta com estilo, no jogo que os fãs de ação estavam esperando. Agora inclui o conteúdo baixável Personagem Jogável: Vergil (também disponível separadamente).",
-   
   },
   {
     setGameIMGForm:
       "https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ",
     setGameNameForm: "Resident Evil 7 ",
     setGameReleaseDateForm: "2018",
-    setGameDescriptionForm: " texto amostra ",
+    setGameDescriptionForm: " A história segue a busca do civil Ethan Winters por sua esposa Mia, que o leva a uma mansão agrícola aparentemente abandonada e habitada pela família Baker. Ethan faz uso de armas e ferramentas na luta contra os membros da família e os \"Mofados\", uma forma humanoide de bactéria."
   },
-  {
-    setGameIMGForm:
-      "https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ",
-    setGameNameForm: "Resident Evil 7 ",
-    setGameReleaseDateForm: "2018",
-    setGameDescriptionForm: " texto amostra ",
-  },
+  
 ];
 
 
