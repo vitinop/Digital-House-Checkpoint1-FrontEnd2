@@ -2,9 +2,8 @@
 
 let botaoSubimit = document.getElementById("submit");
 
-// const submit = document.getElementById('submit');
 
-// json Cards
+// Banco dos Cards (JSON)
 let cardInfoBank = [
   {
     setGameIMGForm:
@@ -36,7 +35,8 @@ let cardInfoBank = [
   },
 ];
 
-// Renderizando os cards via Js - Através do JSON
+
+// Renderizando os cards via Js - Através da exploração bacon JSON e renderização dos itens
 const criarItemCard = (
   setGameIMGForm,
   setGameNameForm,
@@ -58,6 +58,8 @@ const criarItemCard = (
   document.getElementById("gameCardsSection").appendChild(newCard);
 };
 
+
+
 // Resetador do ultimo card da lista dos cards
 const limparCards = () => {
   const listaCards = document.getElementById("gameCardsSection");
@@ -65,6 +67,8 @@ const limparCards = () => {
     listaCards.removeChild(listaCards.lastChild);
   }
 };
+
+
 
 // Ao atualizar um card um ultimo card da lista é apagado
 const atualizarItens = () => {
@@ -79,20 +83,17 @@ const atualizarItens = () => {
   );
 };
 
-// Adiciona um novo card no Json com o evento submit -- FALTA ARRUMAR daqui pra baixo ta bugado
+// Adiciona um novo card no Json com o evento submit 
 
-function inserirNovoItemNoJson(
-  getGameIMGForm,
-  getGameNameForm,
-  getGameReleaseDateForm,
-  getGameDescriptionForm
-) {
-  
-
+function inserirNovoItemNoJson() {
   let getGameIMGFormValue = document.getElementById("gameIMGForm");
   let getGameNameFormValue = document.getElementById("gameNameForm");
-  let getGameReleaseDateFormValue = document.getElementById("gameReleaseDateForm");
-  let getGameDescriptionFormValue = document.getElementById("gameDescriptionForm");
+  let getGameReleaseDateFormValue = document.getElementById(
+    "gameReleaseDateForm"
+  );
+  let getGameDescriptionFormValue = document.getElementById(
+    "gameDescriptionForm"
+  );
 
   let newObjCard = {
     setGameIMGForm: getGameIMGFormValue.value,
@@ -100,25 +101,24 @@ function inserirNovoItemNoJson(
     setGameReleaseDateForm: getGameReleaseDateFormValue.value,
     setGameDescriptionForm: getGameDescriptionFormValue.value,
   };
- 
+
   //atualizaçao forçada ao adicionar novo item
   cardInfoBank.push(newObjCard);
   atualizarItens();
-  
 
-  // Limpar o Campo subimit
-  getGameIMGFormValue.value ='';
-  getGameNameFormValue.value='';
-  getGameReleaseDateFormValue.value='';
-  getGameDescriptionFormValue.value=''
+  // Limpar o Campo subimit após a adição do mesmo no JSON
+  getGameIMGFormValue.value = "";
+  getGameNameFormValue.value = "";
+  getGameReleaseDateFormValue.value = "";
+  getGameDescriptionFormValue.value = "";
 }
 
-botaoSubimit.addEventListener("click",(event)=>{
+botaoSubimit.addEventListener("click", (event) => {
+  event.preventDefault();
 
-  event.preventDefault()
+  inserirNovoItemNoJson();
+});
 
-    inserirNovoItemNoJson()
-    
-} );
 
+//forçar atualização dos itens no JSON
 atualizarItens();
