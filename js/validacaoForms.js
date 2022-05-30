@@ -33,7 +33,7 @@ function checkName(){
          ic1[0].classList.add('sucess');
          mensplaceholder.push('Nome do Jogo')
          placeholder[0].innerText = mensplaceholder;
-         h1.innerText = gameNameForm.value; 
+         h1.innerText = gameNameForm.value;
      }
  }
 //-----------gameReleaseDateForm----------------
@@ -51,7 +51,7 @@ function CheckReleaseDate(){
          placeholder[1].innerText = mensplaceholder;
          ic1[1].classList.add('fail');
      }
-     else if (gameReleaseDateForm.value <= 1980 ){
+     else if (gameReleaseDateForm.value <= 1950 ){
          e.preventDefault();
          mensplaceholder.push('Sem viagens No tempo!!!')
          placeholder[1].innerText = mensplaceholder;
@@ -65,7 +65,6 @@ function CheckReleaseDate(){
          placeholder[1].innerText = mensplaceholder;
          h3.innerText = gameReleaseDateForm.value; 
      }
-
 }
 //-----------gameDescriptionForm----------------B.O.zinho não resulvido por(vini) = validando o gameIMGForm
 function CheckDescription(){
@@ -75,6 +74,12 @@ function CheckDescription(){
            mensplaceholder.push('Adicione uma descrição test1');
            placeholder[2].innerText = mensplaceholder;
            ic1[2].classList.add('fail');
+       }
+       else if (gameDescriptionForm.value.maxlength >= 445) {
+        e.preventDefault();
+        mensplaceholder.push('Limite maximo de 445 caracteres!!!');
+        placeholder[2].innerText = mensplaceholder;
+        ic1[2].classList.add('fail');
        }
        else {
            ic1[2].classList.remove('fail');
