@@ -122,6 +122,7 @@ function inserirNovoItemNoJson() {
   getGameDescriptionFormValue.value = "";
 }
 
+//Captura do submit através do click no botão de enviar formulário
 botaoSubimit.addEventListener("click", (event) => {
   event.preventDefault();
 
