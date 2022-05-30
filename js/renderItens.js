@@ -87,10 +87,12 @@ function inserirNovoItemNoJson(
   getGameReleaseDateForm,
   getGameDescriptionForm
 ) {
-  let getGameIMGFormValue = document.getElementById.value("gameIMGForm");
-  let getGameNameFormValue = document.getElementById.value("gameNameForm");
-  let getGameReleaseDateFormValue = document.getElementById.value("gameReleaseDateForm");
-  let getGameDescriptionFormValue = document.getElementById.value("gameDescriptionForm");
+  
+
+  let getGameIMGFormValue = document.getElementById("gameIMGForm");
+  let getGameNameFormValue = document.getElementById("gameNameForm");
+  let getGameReleaseDateFormValue = document.getElementById("gameReleaseDateForm");
+  let getGameDescriptionFormValue = document.getElementById("gameDescriptionForm");
 
   let newObjCard = {
     setGameIMGForm: getGameIMGFormValue.value,
@@ -98,18 +100,25 @@ function inserirNovoItemNoJson(
     setGameReleaseDateForm: getGameReleaseDateFormValue.value,
     setGameDescriptionForm: getGameDescriptionFormValue.value,
   };
-
+ 
   //atualizaçao forçada ao adicionar novo item
   cardInfoBank.push(newObjCard);
   atualizarItens();
-  console.log(cardInfoBank);
+  
+
   // Limpar o Campo subimit
-  getGameIMGForm.target.value = "";
-  getGameNameForm.target.value = "";
-  getGameReleaseDateForm.target.value = "";
-  getGameDescriptionForm.target.value = "";
+  getGameIMGFormValue.value ='';
+  getGameNameFormValue.value='';
+  getGameReleaseDateFormValue.value='';
+  getGameDescriptionFormValue.value=''
 }
 
-botaoSubimit.addEventListener("click", inserirNovoItemNoJson());
+botaoSubimit.addEventListener("click",(event)=>{
+
+  event.preventDefault()
+
+    inserirNovoItemNoJson()
+    
+} );
 
 atualizarItens();
