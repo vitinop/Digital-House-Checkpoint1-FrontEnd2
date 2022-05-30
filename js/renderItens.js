@@ -12,17 +12,18 @@ let botaoSubimit = document.getElementById("submit");
 let cardInfoBank = [
   {
     setGameIMGForm:
-      "https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ",
-    setGameNameForm: "a ",
-    setGameReleaseDateForm: "a",
-    setGameDescriptionForm: "a",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg?t=1643243335 ",
+    setGameNameForm: "Devil May Dry 5",
+    setGameReleaseDateForm: "2019",
+    setGameDescriptionForm: "O melhor caçador de demônios está de volta com estilo, no jogo que os fãs de ação estavam esperando. Agora inclui o conteúdo baixável Personagem Jogável: Vergil (também disponível separadamente).",
   },
   {
     setGameIMGForm:
-      "https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ",
-    setGameNameForm: "a ",
-    setGameReleaseDateForm: "a",
-    setGameDescriptionForm: "a",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg?t=1643243335 ",
+    setGameNameForm: "Devil May Dry 5",
+    setGameReleaseDateForm: "2019",
+    setGameDescriptionForm: "O melhor caçador de demônios está de volta com estilo, no jogo que os fãs de ação estavam esperando. Agora inclui o conteúdo baixável Personagem Jogável: Vergil (também disponível separadamente).",
+   
   },
   {
     setGameIMGForm:
