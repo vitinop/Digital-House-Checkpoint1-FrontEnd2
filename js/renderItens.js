@@ -1,43 +1,51 @@
-'use strict';
+"use strict";
 
-// getGameIMGForm = document.getElementById('gameIMGForm');
-// getGameNameForm = document.getElementById('gameNameForm');
-// getGameReleaseDateForm = document.getElementById('gameReleaseDateForm');
-// getGameDescriptionForm = document.getElementById('gameDescriptionForm');
+let botaoSubimit = document.getElementById("submit");
 
 // const submit = document.getElementById('submit');
 
-
-
 // json Cards
 let cardInfoBank = [
-    {
-      'setGameIMGForm' :'https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ',
-      'setGameNameForm' :'a ',
-      'setGameReleaseDateForm': 'a',
-      'setGameDescriptionForm':'a',
-    },
-    {
-      'setGameIMGForm' :'https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ',
-      'setGameNameForm' :'a ',
-      'setGameReleaseDateForm': 'a',
-      'setGameDescriptionForm':'a',
-    },
-    {
-      'setGameIMGForm' :'https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ',
-      'setGameNameForm' :'Resident Evil 7 ',
-      'setGameReleaseDateForm': '2018',
-      'setGameDescriptionForm':" texto amostra ",
-    },
-    
-
+  {
+    setGameIMGForm:
+      "https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ",
+    setGameNameForm: "a ",
+    setGameReleaseDateForm: "a",
+    setGameDescriptionForm: "a",
+  },
+  {
+    setGameIMGForm:
+      "https://king.host/blog/wp-content/uploads/2018/12/2018-12-27-img-blog-teste-ab-1280x720.png ",
+    setGameNameForm: "a ",
+    setGameReleaseDateForm: "a",
+    setGameDescriptionForm: "a",
+  },
+  {
+    setGameIMGForm:
+      "https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ",
+    setGameNameForm: "Resident Evil 7 ",
+    setGameReleaseDateForm: "2018",
+    setGameDescriptionForm: " texto amostra ",
+  },
+  {
+    setGameIMGForm:
+      "https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png ",
+    setGameNameForm: "Resident Evil 7 ",
+    setGameReleaseDateForm: "2018",
+    setGameDescriptionForm: " texto amostra ",
+  },
 ];
 
-// Criando os cards via Js
-const criarItemCard = (setGameIMGForm, setGameNameForm, setGameReleaseDateForm,setGameDescriptionForm ) => {
-  const newCard= document.createElement('div');
-  newCard.classList.add('individualGamecard');
-  newCard.innerHTML =`
+// Renderizando os cards via Js - Através do JSON
+const criarItemCard = (
+  setGameIMGForm,
+  setGameNameForm,
+  setGameReleaseDateForm,
+  setGameDescriptionForm
+) => {
+  const newCard = document.createElement("div");
+  newCard.classList.add("individualGamecard");
+  newCard.innerHTML = `
   
   <img src='${setGameIMGForm}' />
       <div class="text">
@@ -45,35 +53,63 @@ const criarItemCard = (setGameIMGForm, setGameNameForm, setGameReleaseDateForm,s
         <h3 class="animate-text">${setGameReleaseDateForm}</h3>
         <p class="animate-text">${setGameDescriptionForm}</p>
       </div>
-  `
+  `;
 
-  document.getElementById('gameCardsSection').appendChild(newCard);
-}
-
+  document.getElementById("gameCardsSection").appendChild(newCard);
+};
 
 // Resetador do ultimo card da lista dos cards
-const limparCards=() => {
-  const listaCards= document.getElementById('gameCardsSection');
-  while (listaCards.firstChild)
-  {
-    listaCards.removeChild(listaCards.lastChild)
+const limparCards = () => {
+  const listaCards = document.getElementById("gameCardsSection");
+  while (listaCards.firstChild) {
+    listaCards.removeChild(listaCards.lastChild);
   }
-
-}
+};
 
 // Ao atualizar um card um ultimo card da lista é apagado
 const atualizarItens = () => {
   limparCards();
-  cardInfoBank.forEach(item => criarItemCard (item.setGameIMGForm, item.setGameNameForm, item.setGameReleaseDateForm , item.setGameDescriptionForm));
-  
+  cardInfoBank.forEach((item) =>
+    criarItemCard(
+      item.setGameIMGForm,
+      item.setGameNameForm,
+      item.setGameReleaseDateForm,
+      item.setGameDescriptionForm
+    )
+  );
+};
+
+// Adiciona um novo card no Json com o evento submit -- FALTA ARRUMAR daqui pra baixo ta bugado
+
+function inserirNovoItemNoJson(
+  getGameIMGForm,
+  getGameNameForm,
+  getGameReleaseDateForm,
+  getGameDescriptionForm
+) {
+  let getGameIMGFormValue = document.getElementById.value("gameIMGForm");
+  let getGameNameFormValue = document.getElementById.value("gameNameForm");
+  let getGameReleaseDateFormValue = document.getElementById.value("gameReleaseDateForm");
+  let getGameDescriptionFormValue = document.getElementById.value("gameDescriptionForm");
+
+  let newObjCard = {
+    setGameIMGForm: getGameIMGFormValue.value,
+    setGameNameForm: getGameNameFormValue.value,
+    setGameReleaseDateForm: getGameReleaseDateFormValue.value,
+    setGameDescriptionForm: getGameDescriptionFormValue.value,
+  };
+
+  //atualizaçao forçada ao adicionar novo item
+  cardInfoBank.push(newObjCard);
+  atualizarItens();
+  console.log(cardInfoBank);
+  // Limpar o Campo subimit
+  getGameIMGForm.target.value = "";
+  getGameNameForm.target.value = "";
+  getGameReleaseDateForm.target.value = "";
+  getGameDescriptionForm.target.value = "";
 }
 
-// Adiciona um novo card no Json com o evento submit
-const inserirNovoItem = () =>{
-  document.getElementById('submit').onclick(cardInfoBank.push({}));
-  atualizarItens ();
-}
+botaoSubimit.addEventListener("click", inserirNovoItemNoJson());
 
-
-
-atualizarItens ();
+atualizarItens();
