@@ -2,6 +2,11 @@
 
 let botaoSubimit = document.getElementById("submit");
 
+// O fluxo de dados para renderização de cards será feita atraves da leitura do nosso banco em JSON, e a partir dos intens nele inseridos, a renderezição acontece. 
+// Basicamente temos duas funções primárias na aplicação, uma de renderizar os itens desse banco JSON  e
+// Outra que adiciona itens no JSON, a partir do Submit acionando o evento, desde que ele passe por todos os quesitos de validação
+
+
 
 // Banco dos Cards (JSON)
 let cardInfoBank = [
@@ -36,6 +41,8 @@ let cardInfoBank = [
 ];
 
 
+
+
 // Renderizando os cards via Js - Através da exploração bacon JSON e renderização dos itens
 const criarItemCard = (
   setGameIMGForm,
@@ -60,7 +67,9 @@ const criarItemCard = (
 
 
 
-// Resetador do ultimo card da lista dos cards
+// Resetador do ultimo card da lista dos cards a fim de evitar a repetição de itens, 
+// Uma vez que essa função nao está presente, ele renderiza novamente os itens, gerando dualidades, por isso a importancia desse campo
+
 const limparCards = () => {
   const listaCards = document.getElementById("gameCardsSection");
   while (listaCards.firstChild) {
@@ -83,7 +92,7 @@ const atualizarItens = () => {
   );
 };
 
-// Adiciona um novo card no Json com o evento submit 
+// Essa função Adiciona um novo card no nosso banco JSON com o evento submit 
 
 function inserirNovoItemNoJson() {
   let getGameIMGFormValue = document.getElementById("gameIMGForm");
