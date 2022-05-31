@@ -77,37 +77,37 @@ const atualizarItens = () => {
 
 // Essa função Adiciona um novo card no nosso banco JSON com o evento submit 
 
-// function inserirNovoItemNoJson() {
-//   let getGameIMGFormValue = document.getElementById("gameIMGForm");
-//   let getGameNameFormValue = document.getElementById("gameNameForm");
-//   let getGameReleaseDateFormValue = document.getElementById("gameReleaseDateForm");
-//   let getGameDescriptionFormValue = document.getElementById("gameDescriptionForm");
+function inserirNovoItemNoJson() {
+  let getGameIMGFormValue = document.getElementById("gameIMGForm");
+  let getGameNameFormValue = document.getElementById("gameNameForm");
+  let getGameReleaseDateFormValue = document.getElementById("gameReleaseDateForm");
+  let getGameDescriptionFormValue = document.getElementById("gameDescriptionForm");
 
-//   let newObjCard = {
-//     setGameNameForm: getGameNameFormValue.value,
-//     setGameReleaseDateForm: getGameReleaseDateFormValue.value,
-//     setGameDescriptionForm: getGameDescriptionFormValue.value,
-//     setGameIMGForm: getGameIMGFormValue.value,
-//   };
+  let newObjCard = {
+    setGameNameForm: getGameNameFormValue.value,
+    setGameReleaseDateForm: getGameReleaseDateFormValue.value,
+    setGameDescriptionForm: getGameDescriptionFormValue.value,
+    setGameIMGForm: getGameIMGFormValue.value,
+  };
 
-//   //atualizaçao forçada ao adicionar novo item
-//   cardInfoBank.push(newObjCard);
-//   atualizarItens();
+  //atualizaçao forçada ao adicionar novo item
+  cardInfoBank.push(newObjCard);
+  atualizarItens();
 
-//   // Limpar o Campo subimit após a adição do mesmo no JSON
-//   getGameNameFormValue.value = "";
-//   getGameReleaseDateFormValue.value = "";
-//   getGameDescriptionFormValue.value = "";
-//   getGameIMGFormValue.value = "";
-// }
+  // Limpar o Campo subimit após a adição do mesmo no JSON
+  getGameNameFormValue.value = "";
+  getGameReleaseDateFormValue.value = "";
+  getGameDescriptionFormValue.value = "";
+  getGameIMGFormValue.value = "";
+}
 
-// //Captura do submit através do click no botão de enviar formulário
-// botaoSubimit.addEventListener("click", (event) => {
-//   event.preventDefault();
+//Captura do submit através do click no botão de enviar formulário
+botaoSubimit.addEventListener("click", (event) => {
+  event.preventDefault();
 
-//   inserirNovoItemNoJson();
-// });
+  inserirNovoItemNoJson();
+});
 
 
-// //forçar atualização dos itens no JSON
-// atualizarItens();
+//forçar atualização dos itens no JSON
+atualizarItens();
