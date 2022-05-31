@@ -8,7 +8,7 @@ const form = document.getElementById('form');
 const fail = document.querySelector('fail');
 const sucess = document.querySelector('sucess');
 const enviar = document.querySelector('#submit');
-
+const errorMsg = document.querySelector('errorMsg')
 //----------submit-----------------
 enviar.addEventListener('click', (e) =>{
    checkName();
