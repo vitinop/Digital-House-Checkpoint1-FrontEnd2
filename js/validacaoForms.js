@@ -8,7 +8,7 @@ const form = document.getElementById('form');
 const fail = document.querySelector('fail');
 const sucess = document.querySelector('sucess');
 const enviar = document.querySelector('#submit');
-const span = document.querySelectorAll('span')
+const span = document.querySelectorAll('span');
 //----------submit-----------------
 enviar.addEventListener('click', (e) =>{
    checkName();
@@ -20,14 +20,14 @@ function checkName(){
     let mensplaceholder =[];
     if(gameNameForm.value === '' || gameNameForm.value == null){
         e.preventDefault(); 
-        mensplaceholder.push('Adicione um Nome!!!')
+        mensplaceholder.push('Adicione um Nome!!!');
         ic1[0].classList.add('fail');
         span[0].innerText = mensplaceholder;
     }
     else {
         ic1[0].classList.remove('fail');
         ic1[0].classList.add('sucess');
-        mensplaceholder.push('')
+        mensplaceholder.push('');
         span[0].innerText = mensplaceholder;
     }
  }
@@ -36,19 +36,19 @@ function CheckReleaseDate(){
     let mensplaceholder = [];
     if(gameReleaseDateForm.value == 0 ){
         e.preventDefault();
-        mensplaceholder.push('Adicione uma data!!!')
+        mensplaceholder.push('Adicione uma data!');
         ic1[1].classList.add('fail');
         span[1].innerText = mensplaceholder;
     }
     else if (gameReleaseDateForm.value >= 2023 ){
         e.preventDefault();
-        mensplaceholder.push('Pega leve ai John Connor!!!')
+        mensplaceholder.push('Pega leve ai John Connor!');
         ic1[1].classList.add('fail');
         span[1].innerText = mensplaceholder;
     }
     else if (gameReleaseDateForm.value <= 1950 ){
         e.preventDefault();
-        mensplaceholder.push('Sem viagens No tempo!!!')
+        mensplaceholder.push('Sem viagens No tempo!');
         ic1[1].classList.add('fail');
         span[1].innerText = mensplaceholder;
     }
@@ -59,7 +59,7 @@ function CheckReleaseDate(){
         span[1].innerText = mensplaceholder;
     }
 }
-//-----------gameDescriptionForm----------------B.O.zinho não resulvido por(vini) = o gameDescriptionForm esta validando o gameIMGForm
+//-----------gameDescriptionForm----------------
 function CheckDescription(){
     let mensplaceholder = []
     if(gameDescriptionForm.value === '' || gameDescriptionForm.value == null){
@@ -71,7 +71,7 @@ function CheckDescription(){
     else {
         ic1[2].classList.remove('fail');
         ic1[2].classList.add('sucess');
-        mensplaceholder.push('')
+        mensplaceholder.push('');
         span[2].innerText = mensplaceholder;
        }
 }
@@ -87,7 +87,7 @@ function CheckIMG(){
     else {
         ic1[3].classList.remove('fail');
         ic1[3].classList.add('sucess');
-        mensplaceholder.push('test')
+        mensplaceholder.push('test');
         span[3].innerText = mensplaceholder;
     }
 }
