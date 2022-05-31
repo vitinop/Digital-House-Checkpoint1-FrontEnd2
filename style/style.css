@@ -98,6 +98,7 @@ input[type="number"] {
   height: 3em;
   padding: 4px 20px 0;
   position: relative;
+  font-size: 13px;
 }
 
 
@@ -136,7 +137,7 @@ input[type="number"] {
 }
 
 .cut_long {
-  width: 220px;
+  width: 130px;
 }
 
 .input:focus~.cut,
