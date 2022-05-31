@@ -81,13 +81,13 @@ function CheckIMG(){
     if (gameIMGForm.Value === '' || gameIMGForm.Value == null) {
         e.preventDefault();
         mensplaceholder.push('Adinione uma imagem com uma URL');
-        ic1[2].classList.add('fail');
+        ic1[3].classList.add('fail');
         span[3].innerText = mensplaceholder;
     }
     else {
-        ic1[2].classList.remove('fail');
-        ic1[2].classList.add('sucess');
-        mensplaceholder.push('')
+        ic1[3].classList.remove('fail');
+        ic1[3].classList.add('sucess');
+        mensplaceholder.push('test')
         span[3].innerText = mensplaceholder;
     }
 }
