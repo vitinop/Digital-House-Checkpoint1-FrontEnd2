@@ -38,7 +38,7 @@
 
 Acesse o prototipo do projeto através do link :
     
-https://digital-house-checkpoint2-frontend.vercel.app/
+https://digital-house-checkpoint1-front-end2.vercel.app/
 
 
 
