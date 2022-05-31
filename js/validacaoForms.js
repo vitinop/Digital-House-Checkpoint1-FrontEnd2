@@ -3,7 +3,7 @@ const gameReleaseDateForm = document.getElementById('gameReleaseDateForm');
 const gameDescriptionForm = document.getElementById('gameDescriptionForm');
 const gameIMGForm = document.getElementById('gameIMGForm');
 const placeholder = document.querySelectorAll('.placeholder');
-const ic1 = document.querySelectorAll('.ic1');
+const ic1 = document.querySelectorAll('ic1');
 const form = document.getElementById('form');
 const fail = document.querySelector('fail');
 const sucess = document.querySelector('sucess');
@@ -19,7 +19,7 @@ function checkName(){
      let mensplaceholder =[];
      if(gameNameForm.value === '' || gameNameForm.value == null){
          e.preventDefault(); 
-         mensplaceholder.push('Adicione um Nome!!!')
+         mensplaceholder.push('Adicione um Nome!!!');
          placeholder[0].innerText = mensplaceholder;
          ic1[0].classList.add('fail');
      }
