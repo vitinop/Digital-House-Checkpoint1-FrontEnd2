@@ -5,8 +5,8 @@ const gameIMGForm = document.getElementById('gameIMGForm');
 const placeholder = document.querySelectorAll('.placeholder');
 const ic1 = document.querySelectorAll('.ic1');
 const form = document.getElementById('form');
-const fail = document.querySelector('fail');
-const sucess = document.querySelector('sucess');
+const fail = document.querySelectorAll('.fail');
+const sucess = document.querySelectorAll('.sucess');
 const enviar = document.querySelector('#submit');
 const span = document.querySelectorAll('span');
 //----------submit-----------------

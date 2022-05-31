@@ -301,7 +301,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .input-container .fa-circle-check {
   position: absolute;
   top: 15px;
-  right: -18px;
+  right: -20px;
   color: green;
   visibility: hidden;
   
@@ -310,7 +310,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .input-container .fa-circle-xmark {
   position: absolute;
   top: 15px;
-  right: -18px;
+  right: -20px;
   color: red;
   visibility: hidden;
 
@@ -330,6 +330,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 
 .input-container.fail input {
+  visibility: visible;
   border: red 2px solid;
 
 }
